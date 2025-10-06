@@ -60,7 +60,7 @@ The app saves user data in a PostgreSQL database and allows editing existing ent
 docker build -t frontend .
 ```
 
-2. **Navigate to backend folder and Run with Docker Compose:**
+2. **Navigate to helmes-homework folder and Run with Docker Compose:**
 
 ```bash
 docker-compose up --build
