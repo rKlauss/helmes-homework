@@ -40,9 +40,6 @@ The app saves user data in a PostgreSQL database and allows editing existing ent
 
 ### Prerequisites
 
-- Java 21
-- Maven
-- PostgreSQL
 - Docker
 
 ### Installation
@@ -50,7 +47,7 @@ The app saves user data in a PostgreSQL database and allows editing existing ent
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/rKlauss/helmes-homework.git
-   cd helmes
+   cd helmes-homework
    ```
 
 ---
