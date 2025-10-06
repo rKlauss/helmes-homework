@@ -13,11 +13,9 @@ const SectorForm: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
+    const isDark = localStorage.getItem("theme") === "dark";
+    setIsDarkMode(isDark);
+    document.documentElement.toggleAttribute("data-theme", isDark);
 
     const loadInitialData = async () => {
       try {
@@ -115,7 +113,6 @@ const SectorForm: React.FC = () => {
         </option>
       );
 
-      // Recursively add children
       sectors
         .filter((s) => s.parentId === sector.id)
         .forEach((child) => addSector(child, depth + 1));
